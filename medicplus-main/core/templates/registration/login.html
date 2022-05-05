@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'web/base.html' %}
+{% load static %}
+{% block contenido %}
+  
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/register.css' %}">
+    {% endblock css %}
+
+    <div class="signup-form">
+        <form role="form" method="POST">
+            {% csrf_token %}
+            <h2>Registro Centro Medico Galenos</h2>
+            <p class="hint-text">Crea tu cuenta para tomar horas medicas.</p>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label bg-info">Rut:</label>
+                        {{form.rutPac}}
+                        <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
+                    </div>
+                </div>        	
+            </div>
+            <div class="form-group">
+                <label class="form-label bg-info">Email:</label>
+                {{form.emailPac}}
+                <!--<input type="email" class="form-control" name="email" placeholder="Email" required="required">-->
+            </div>
+            <hr>   
+            <div class="form-group">
+                <button type="submit" class="btn btn-info btn-lg btn-block">Entrar / Pedir Hora</button>
+            </div>
+        </form>
+        <div class="text-center">Tienes una cuenta? <a href="{% url 'register' %}">Registrate</a></div>
+    </div>
+
+{% endblock contenido %} 

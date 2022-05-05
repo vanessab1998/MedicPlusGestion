@@ -1,0 +1,35 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block contenido %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+    {% endblock css %}
+    <div class="container login-form">
+        <div class="row" >
+            <div class="col-md-12 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <form id="register-form" role="form" autocomplete="on" class="form" method="POST">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{% static 'app/img/agregar-usuario.png' %}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title bg-info">Aun no tengo cuenta</h5>
+                                        <a href="{% url 'register' %}" class="btn btn-primary">Crear +</a>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{% static 'app/img/creer.png' %}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title bg-info">Ya tengo cuenta</h5>
+                                        <a href="{% url 'tomahora' %}" class="btn btn-primary">Pedir Hora +</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %} 

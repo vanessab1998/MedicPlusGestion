@@ -1,0 +1,56 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block contenido %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+    {% endblock css %}
+    <div class="container login-form">
+        <div class="row" >
+            <div class="col-md-12 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <form id="register-form" role="form" autocomplete="on" class="form" method="POST">
+                                {% csrf_token %}
+                                <div class="imgcontact">
+                                    <img src="{% static 'app/img/nuevo-mensaje.png'  %}" alt="Avatar">
+                                </div>
+                                <h2 class="text-center">Contactanos</h2>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label bg-info">Correo:</label>
+                                        {{cform.email}}
+                                        <!--<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label bg-info">Nombre:</label>
+                                        {{cform.nameContact}}
+                                        <!--<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Brandon Sepulveda">
+                                        -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label bg-info">Mensaje:</label>
+                                        {{cform.msn}}
+                                        <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label bg-info">Fecha:</label>
+                                        {{cform.created_date}}
+                                        <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input name="btnForget" class="btn btn-lg btn-info btn-block btnForget" value="submit" type="submit">
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %} 

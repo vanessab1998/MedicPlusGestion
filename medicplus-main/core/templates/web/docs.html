@@ -1,0 +1,51 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block contenido %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/register.css' %}">
+    {% endblock css %}
+
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8"><h2>Lista de Doctores</h2><h2>Centro Medico Galenos</h2></div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered bg-info" >
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Rut</th>
+                            <th>Area Medica</th>
+                            <th>E-mail</th>
+                            <th>Historial de consultas</th>
+                            <th>Comprobantes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for p in info %}
+                            <tr>
+                                <td>{{p.id | title}}</td>
+                                <td>{{p.nomDoc | title}} {{p.aPatDoc | title}}</td>
+                                <td>{{p.rutDoc | title}}</td>
+                                <td>{{p.fkAMedica | title}}</td>
+                                <td>{{p.emailDoc}}</td>
+                                <td>
+                                    <a href="{% url 'informeHoras' p.id%}" class="bg-warning" title="View" data-toggle="tooltip">Consultas Med</a>
+                                </td>
+                                <td> 
+                                    <a href="{% url 'informePagos' p.id%}" class="bg-warning" title="View" data-toggle="tooltip">Comprobantes</a>
+                                </td>
+                            </tr>
+                        {% endfor %}   
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+    </div>   
+
+{% endblock contenido %}
