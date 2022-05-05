@@ -129,7 +129,7 @@ class hora(models.Model):
     def __str__(self):
         return self.hora
 
-# TABLA HORA MDEICA
+# TABLA HORA MEDICA
 class horaMedica(models.Model):
 
     consulta = models.TextField( max_length=400)

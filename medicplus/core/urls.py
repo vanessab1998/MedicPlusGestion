@@ -14,4 +14,5 @@ urlpatterns = [
     path("informePagos/<idDoc>/", views.informePagos, name="informePagos"),
     path("geninfoHM/<idDoc>/", views.geninfoHM, name="geninfoHM"),
     path("geninfoPagosHM/<idDoc>/", views.geninfoPagosHM, name="geninfoPagosHM"),
+    path("infoDoc/<idDoc>/", views.infoDoc, name="infoDoc"),
 ]

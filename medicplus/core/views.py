@@ -173,3 +173,15 @@ def gmail(request, idUser):
     for i in horaMed:
         print("Has Agendado Correctamente Tu Horma Medica, El/la" + i.fkMedico + " te espera el " \
             + i.fecha + " a las " + i.fkHora + "hrs. No Faltes! \n Atte. Centro Medico Galenos ")
+
+def infoDoc(request, idDoc): #DATOS DE DOCTORES
+    
+    infodoc = doctor.objects.filter(id=idDoc)
+
+    data = {
+        'info' : infodoc,
+    }    
+    return render(request, 'web/infoDoc.html', data)
+
+
+
