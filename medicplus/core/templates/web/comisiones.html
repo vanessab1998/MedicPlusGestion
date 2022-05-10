@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% extends 'web/base.html' %}
+{% load static %}
+{% block contenido %}
+  
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/register.css' %}">
+    {% endblock css %}
+
+    <div class="signup-form">
+        <form role="form" method="POST">
+            {% csrf_token %}
+            <h2>Registro Centro Medico Galenos</h2>
+                <!--<div class="text-center">
+                    <label class="exampleFormControlInput1" class="form-label bg-info">fkMedico:</label>
+                    {{comiform.fkMedico}}
+                   <input type="text" class="form-control" name="Médico" placeholder="Médico" required="required">
+                </div>-->
+                                    
+                <div class="form-group">
+                    <label class="form-label bg-info">fkMedico:</label>
+                    {{comiform.fkMedico}}
+                    <!--<input type="email" class="form-control" name="email" placeholder="Email" required="required">-->
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label bg-info">Fecha:</label>
+                    {{comiform.fecha}}
+                    <!--<input type="date" class="form-control" required="required">-->
+                </div>
+                <div class="mb-3">
+                    <label class="form-label bg-info">fkPago:</label>
+                    {{comiform.fkPago}}
+                     <!--<input type="number" class="form-control" name="number" placeholder="Pago" required="required">-->
+                </div>     
+                <div class="mb-3">
+                    <label class="form-label bg-info">HORA:</label>
+                    {{comiform.fkHora}}
+                     <!--<input type="number" class="form-control" name="number" placeholder="Pago" required="required">-->
+                </div>    
+                <div class="mb-3">
+                    <label class="exampleFormControlTextarea1">Datos extras:</label>
+                    {{comiform.consulta}}
+                     <!--<input type="time" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
+                </div>  
+                <div class="mb-3">
+                    <label class="exampleFormControlTextarea1">Paciente:</label>
+                    {{comiform.fkPaciente}}
+                     <!--<input type="time" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
+                </div>  
+                <div class="mb-3">
+                    <label class="exampleFormControlTextarea1">Tipo de pago:</label>
+                    {{comiform.fkTipoPago}}
+                     <!--<input type="time" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
+                </div>  
+                <div class="form-group">
+                    <label class="form-check-label"><input type="checkbox" required="required"> Acepto los <a href="#">Terminos y </a> &amp; <a href="#">Politica de privacidad</a></label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info btn-lg btn-block">Crear comprobante</button>
+                </div>
+            
+        </form>
+    </div>
+
+{% endblock contenido %} 
+
+
+

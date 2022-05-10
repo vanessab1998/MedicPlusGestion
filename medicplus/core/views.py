@@ -37,6 +37,25 @@ def contact(request): #CONTACTO
         
     return render(request, 'web/contact.html',  data)
 
+
+def comisiones(request): #COMISIONES
+    horaMedica = horaMedicaForm()
+    data = {
+        'comiform' : horaMedica
+    }
+    horaMedica = horaMedicaForm(data=request.POST) 
+    if request.method == 'POST':
+        if horaMedica.is_valid():
+            horaMedica.save()
+            print("se registrado correctamente")
+        else:
+            data['comiform'] = horaMedica
+    else:
+        print('No se puedo enviar el mensaje')
+
+    return render(request, 'web/comisiones.html', data)
+
+
 def register(request): #REGISTER USER
     paciente = paceinteForm()
     data = {
