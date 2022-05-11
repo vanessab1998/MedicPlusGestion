@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db.models import fields
-from .models import usercontact, paciente, horaMedica
+from .models import usercontact, paciente, horaMedica, informe
 from django.contrib.auth.models import User
 
 class contactForm(forms.ModelForm):
@@ -25,3 +25,7 @@ class horaMedicaForm(forms.ModelForm):
         model = horaMedica
         fields = '__all__'
 
+class informeForm(forms.ModelForm):
+    class Meta :
+        model = informe
+        fields = '__all__'

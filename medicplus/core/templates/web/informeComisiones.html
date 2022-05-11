@@ -24,35 +24,27 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Info</th>
+                            <th>Secretaria</th>
                             <th>Fecha</th>
-                            <th>Paciente</th>
-                            <th>Eliminar</th>
-                            <th>PDF</th>
+                            <th>Comision</th>
+                            <th>hora médica</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for p in info %}
-                            
                             <tr>
                                 <td>{{p.id | title}}</td>
-                                <td>{{p.consulta | title}}</td>
-                                <td>{{p.fecha | title }} {{p.fkHora | title}}</td>
-                                <td>{{p.fkPaciente | title}}</td>
-                                <td>{{p.fkPaciente | title}}</td>
-                                <td>
-                                    <a href="{% url 'borrarcita' p.id%}" class="btn btn-danger "><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
-                                </td>
-                                <td>
-                                    <div class="form-group text-lg-center">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block"><a href="{% url 'geninfoHM' p.fkMedico.id%}">Imprimir</a></button>
-                                    </div>
-                                </td>
+                                <td>{{p.fkSecretaria | title}} {{p.APatSec | title}}</td>
+                                <td>{{p.fechaIfo | title}}</td>
+                                <td>{{p.comision | title}}</td>
+                                <td>{{p.fkHoraMedica | title}}</td>
                             </tr>
-                            
-                        {% endfor %} 
+                        {% endfor %}  
+                        <div>
+                        <a href="{% url 'geninfoComision' %}"  class="btn btn-info btn-lg btn-block" ctitle="View" data-toggle="tooltip">IMPRIMIR</a>
+                        </div>
                         <div class="form-group text-lg-center">
-                            <h1>Citas Totales: {{total}}</h1>
+                            <h1>Citas Totales: {{total1}}</h1>
                         </div>
                     </tbody>
                 </table>

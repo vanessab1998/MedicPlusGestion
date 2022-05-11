@@ -150,10 +150,10 @@ class informe(models.Model):
     fechaIfo = models.DateTimeField(auto_now_add=False,auto_now=False,null=True,blank=True)
     fkSecretaria = models.ForeignKey(secretaria, on_delete=models.CASCADE)
     fkHoraMedica = models.ForeignKey(horaMedica, on_delete=models.CASCADE)
-    comision = models.IntegerField();
+    comision = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.fechaIfo
+        return str(self.fechaIfo)
 
 class comprobante(models.Model):
 

@@ -27,7 +27,7 @@
                             <th>Info</th>
                             <th>Fecha</th>
                             <th>Paciente</th>
-                            <th>Eliminar</th>
+                            <th></th>
                             <th>PDF</th>
                         </tr>
                     </thead>
@@ -41,11 +41,8 @@
                                 <td>{{p.fkPaciente | title}}</td>
                                 <td>{{p.fkPaciente | title}}</td>
                                 <td>
-                                    <a href="{% url 'borrarcita' p.id%}" class="btn btn-danger "><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
-                                </td>
-                                <td>
                                     <div class="form-group text-lg-center">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block"><a href="{% url 'geninfoHM' p.fkMedico.id%}">Imprimir</a></button>
+                                     <button type="submit" class="btn btn-success btn-lg btn-block"><a href="{% url 'geninfoHM' p.fkMedico.id%}">Imprimir</a></button>
                                     </div>
                                 </td>
                             </tr>

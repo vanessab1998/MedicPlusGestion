@@ -16,4 +16,8 @@ urlpatterns = [
     path("geninfoPagosHM/<idDoc>/", views.geninfoPagosHM, name="geninfoPagosHM"),
     path("infoDoc/<idDoc>/", views.infoDoc, name="infoDoc"),
     path("comisiones/", views.comisiones, name="comisiones"),
+    path("informeComisiones/", views.informeComisiones, name="informeComisiones"),
+    path("geninfoComision/", views.geninfoComision, name="geninfoComision"),
+    path("agenda/", views.agenda, name="agenda"),
+    path("borrarcita/<id>/", views.borrarcita, name="borrarcita"),
 ]

@@ -33,7 +33,7 @@ def sendEmail(gmail1, msnData):
         server = smtplib.SMTP(host='smtp.gmail.com', port= 587)
         server.starttls(context=context1)
         server.ehlo() 
-        server.login(user='imagineart.contact@gmail.com', password='iart2020')
+        server.login(user='vanessa.katherine9898@gmail.com', password='iart2020')
         server.send_message(msj)
         print("correo enviado exitosamente")
     except Exception as e:
