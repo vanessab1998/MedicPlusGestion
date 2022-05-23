@@ -11,7 +11,7 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8"><h2>Lista de Horas Medicas</h2><b></b></div>
+                        <div class="col-sm-8"><h2>Lista de Comisiones</h2><b></b></div>
                         <div class="col-sm-4">
                             <div class="search-box">
                                 <i class="material-icons">&#xE8B6;</i>
@@ -42,6 +42,9 @@
                         {% endfor %}  
                         <div>
                         <a href="{% url 'geninfoComision' %}"  class="btn btn-info btn-lg btn-block" ctitle="View" data-toggle="tooltip">IMPRIMIR</a>
+                        </div>
+                        <div class="logo">
+                            <img class="img" src="{% static 'app/img/logo_dos_alamos.png'%}" width="200" height="200" alt="logo de la empresa">
                         </div>
                         <div class="form-group text-lg-center">
                             <h1>Citas Totales: {{total1}}</h1>

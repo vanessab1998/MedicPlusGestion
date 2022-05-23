@@ -24,9 +24,9 @@
     <!--NAVBAR-->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="{% url 'index' %}">
-        <img class="imglogo"src="{% static 'app/img/logo_medicplus.png'%}" width="105" height="40" class="d-inline-block align-top" alt="logo">
+        <img class="imglogo"src="{% static 'app/img/logo_dos_alamos.png'%}" width="105" height="40" class="d-inline-block align-top" alt="logo">
     </a>
-    <a class="navbar-brand" href="{% url 'index' %}">MEDIC PLUS</a>
+    <a class="navbar-brand" href="{% url 'index' %}">Dos Álamos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,12 +51,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'contact' %}">Contáctanos</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'contact' %}">Iniciar Sesión</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'agenda' %}">Agenda</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -73,7 +67,7 @@
       <div class="container">
       <div class="row">
       <div class=" col-sm-4 col-md col-sm-8  col-12 col">
-      <h5 class="headin5_amrc col_white_amrc pt2">Centro Medico Galenos</h5>
+      <h5 class="headin5_amrc col_white_amrc pt2">Centro Medico Dos Álamos</h5>
       <!--headin5_amrc-->
       <p class="mb10">Nuestro propósito es Acoger, Cuidar y Sanar a las familias de Chile, entregándoles salud de calidad y atención cálida y conveniente, a lo largo del país.</p>
       <p><i class="fa fa-location-arrow"></i> Nos ubicamos en: <br> Santa María 2321, Peñalolen</p>
@@ -92,9 +86,9 @@
       <h5 class="headin5_amrc col_white_amrc pt2">Redes Sociales</h5>
       <!--headin5_amrc-->
       <ul class="footer_ul_amrc">
-      <div><img src="{% static 'app/img/facebook.png'%}" width="30" height="30" alt="mapa de la empresa"> Medic Plus</div>
-      <div><img src="{% static 'app/img/instagram.png'%}" width="30" height="30" alt="instagram"> Medic_Plus</div>
-      <div><img src="{% static 'app/img/twitter.png'%}" width="30" height="30" alt="twitter"> Medic_Plus</div>
+      <div><img src="{% static 'app/img/facebook.png'%}" width="40" height="30" alt="mapa de la empresa">Dos Álamos</div>
+      <div><img src="{% static 'app/img/instagram.png'%}" width="30" height="30" alt="instagram"> Dos_alamos</div>
+      <div><img src="{% static 'app/img/twitter.png'%}" width="30" height="30" alt="twitter"> Dos_alamos</div>
       <div><img src="{% static 'app/img/whatsapp.png'%}" width="30" height="30" alt="whatsapp">  +56 931189636</div>
       </ul>
       <!--footer_ul_amrc ends here-->
@@ -105,7 +99,7 @@
       <!--headin5_amrc ends here-->
       <h5 class="headin5_amrc col_white_amrc pt2">Logo</h5>
       <ul class="footer_ul2_amrc">
-      <div><img class="img" src="{% static 'app/img/logo_medicplus.png'%}" width="200" height="200" alt="logo de la empresa"></div>
+      <div><img class="img" src="{% static 'app/img/logo_dos_alamos.png'%}" width="200" height="200" alt="logo de la empresa"></div>
       </ul>
       <!--footer_ul2_amrc ends here-->
       </div>
@@ -114,7 +108,7 @@
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="{% url 'tomahora' %}">Reserva tu hora</a></li>
         <li><a href="">Examenes</a></li>
-        <li><a href="">Especialistas</a></li>
+        <li><a href="{% url 'docs' %}">Especialistas</a></li>
       </ul>
         <!--foote_bottom_ul_amrc ends here-->
       </div>

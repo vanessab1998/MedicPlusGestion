@@ -156,7 +156,7 @@ def geninfoHM(request, idDoc):
         'info' : horaMed,
         'total' : horaMed.count()
     }
-    pdf = render_to_pdf('web/informeHoras.html', data)
+    pdf = render_to_pdf('web/impresionHoras.html', data)
     return HttpResponse(pdf, content_type='application/pdf')
 
 def geninfoPagosHM(request, idDoc):
@@ -210,7 +210,7 @@ def geninfoComision(request):
         'info' : informes,
         'total1' : informes.count()
     }
-    pdf = render_to_pdf('web/informeComisiones.html', data)
+    pdf = render_to_pdf('web/impresionInformes.html', data)
     return HttpResponse(pdf, content_type='application/pdf')
 
 

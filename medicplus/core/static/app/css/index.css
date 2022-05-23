@@ -154,3 +154,15 @@ ul{
 .label{
     color: black;
 }
+
+
+/*PDF*/
+
+.logo{
+  float:right;
+}
+
+.textoPDF{
+  float:right;
+}
+

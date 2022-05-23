@@ -1,6 +1,8 @@
+from email.mime import image
 import smtplib, ssl
 from email.message import EmailMessage
-from io import BytesIO # nos ayuda a convertir un html en pdf
+from io import BytesIO
+from django.conf import settings # nos ayuda a convertir un html en pdf
 from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
@@ -15,9 +17,9 @@ def render_to_pdf(template_src, context_dict={}):
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     return None
 
-def sendEmail(gmail1, msnData):
 
-    
+
+def sendEmail(gmail1, msnData):
     try:
         context1 = ssl.create_default_context()
         msj = EmailMessage()

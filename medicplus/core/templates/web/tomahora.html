@@ -11,7 +11,7 @@
     <div class="signup-form">
         <form role="form" action="" method="POST">
             {% csrf_token %}
-            <h2>Hora Médica Centro Medico Galenos</h2>
+            <h2>Hora Médica Centro Medico Dos Álamos</h2>
             <div class="form-group">
                 <div class="row">
                     <div class="col">
@@ -20,17 +20,17 @@
                         <!--<input type="text"lass="form-control" name="first_name" placeholder="First Name" required="required">-->
                     </div>
                     <div class="col">
-                        <label class="form-label bg-info">fkPaciente:</label>
+                        <label class="form-label bg-info">Paciente:</label>
                         {{formTH.fkPaciente}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>
                     <div class="col">
-                        <label class="form-label bg-info">fkHora:</label>
+                        <label class="form-label bg-info">Hora:</label>
                         {{formTH.fkHora}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>
                     <div class="col">
-                        <label class="form-label bg-info">fecha:</label>
+                        <label class="form-label bg-info">fecha(YYYY-MM-DD):</label>
                         {{formTH.fecha}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>     	
