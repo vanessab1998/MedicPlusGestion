@@ -5,9 +5,7 @@
    
     <div class="table-responsive">
             <div class="table-title">
-                <div class="row">
-                    <div class="textoPDF"><h2>CENTRO MÉDICO DOS ÁLAMOS</h2><b></b></div>
-                </div>
+                
             </div>
             <table class="table table-striped table-hover table-bordered bg-info">
                 <thead>
@@ -25,16 +23,17 @@
                             <td>{{p.id | title}}</td>
                             <td>{{p.fkSecretaria | title}} {{p.APatSec | title}}</td>
                             <td>{{p.fechaIfo | title}}</td>
-                            <td>{{p.comision | title}}</td>
+                            <td > $ {{p.comision | title}}</td>
                             <td>{{p.fkHoraMedica | title}}</td>
                         </tr>
                     {% endfor %}  
-                    <div class="logo">
-                        <img class="img" src="https://document-export.canva.com/dszlM/DAFBjPdszlM/30/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20220523%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220523T185123Z&X-Amz-Expires=16649&X-Amz-Signature=06505e241d8a9bff6426a4c99fbe2324ef3e0eca36c5948a68bbad508557a4d0&X-Amz-SignedHeaders=host&response-expires=Mon%2C%2023%20May%202022%2023%3A28%3A52%20GMT" width="200" height="200" alt="logo de la empresa">
-                    </div>
-                    <div class="textoPDF"><h2>Lista de Comprobantes</h2><b></b></div>
+                        <h1>
+                        <img align="right" class="img" src="https://scontent.fscl29-1.fna.fbcdn.net/v/t39.30808-6/283806545_102013342531150_124046670368592097_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WzLfvfrLrxIAX-YNFog&_nc_ht=scontent.fscl29-1.fna&oh=00_AT-43a6kZSr5VWir63UPWvf5vKEVVhxAjaKkC53Sgicf2Q&oe=629BD900" width="100" height="100" alt="logo de la empresa"> 
+                        CENTRO MÉDICO DOS ÁLAMOS<br>____________________________<br>
+                        <b>Lista de informes</b><br>
+                        Citas Totales: {{total1}}
+                        </h1>
                     <div class="form-group text-lg-center">
-                        <h1>Citas Totales: {{total1}}</h1>
                     </div>
                     <hr>
                 </tbody>
@@ -59,14 +58,11 @@
     <div class=" col-sm-4 col-md  col-8 col">
     <h5 class="headin5_amrc col_white_amrc pt2">Redes Sociales</h5>
     <!--headin5_amrc-->
-    <ul class="footer_ul_amrc">
     <div>
-        <div><img src="https://worldschool.xeted.com/pluginfile.php/1/theme_moove/sponsorsimage2/1624987440/facebook.jpg" width="30" height="30" alt="mapa de la empresa">Dos Álamos</div>
-        <div><img src="https://conectasoftware.com/wp-content/uploads/2020/03/icono-instagram.png" width="30" height="30" alt="instagram"> Dos_alamos</div>
-        <div><img src="https://jorgerobledo.com/wp-content/uploads/2019/12/twitter.jpg" width="30" height="30" alt="twitter"> Dos_alamos</div>
-        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBydEo0T1jczaR2xImHoiFrm0LOHt4avwXas8F4w7SL40HfUiv780GeiT3Xf_5LeH0Co&usqp=CAU" width="30" height="30" alt="whatsapp">  +56 931189636</div>
-</div>
-    </ul>
+        <div ><img src="https://thumbs.dreamstime.com/b/logo-de-facebook-reproducido-para-web-e-impresi%C3%B3n-logotipo-redondeado-con-fondo-blanco-transparente-uso-o-prop%C3%B3sito-165757365.jpg" width="30" height="30" alt="mapa de la empresa">Dos Álamos</div>
+        <div ><img src="https://thumbs.dreamstime.com/b/icono-del-logo-de-instagram-voronezh-rusia-enero-circular-logotipo-con-sombra-suave-171161279.jpg" width="40" height="40" alt="instagram"> Dos_alamos</div>
+        <div ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBydEo0T1jczaR2xImHoiFrm0LOHt4avwXas8F4w7SL40HfUiv780GeiT3Xf_5LeH0Co&usqp=CAU" width="30" height="30" alt="whatsapp">  +56 931189636</div>
+    </div>
     </div>
  
   </footer>

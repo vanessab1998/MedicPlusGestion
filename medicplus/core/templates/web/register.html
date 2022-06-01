@@ -16,52 +16,52 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col">
-                        <label class="form-label bg-info">Nombre:</label>
+                        <label class="form-label"><p>Nombre:</p></label>
                         {{form.nomPac }}
                         <!--<input type="text"lass="form-control" name="first_name" placeholder="First Name" required="required">-->
                     </div>
                     <div class="col">
-                        <label class="form-label bg-info">Apellido:</label>
+                        <label class="form-label"><p>Apellido:</p></label>
                         {{form.aPatPac}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>
                     <div class="col">
-                        <label class="form-label bg-info">Rut:</label>
+                        <label class="form-label "><p>Rut:</p></label>
                         {{form.rutPac}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>
                     <div class="mb-3">
-                        <label class="form-label bg-info">Genero:</label>
+                        <label class="form-label "><p>Genero:</p></label>
                         {{form.fkGender}}
                         <!--<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">-->
                     </div>
                 </div>        	
             </div>
             <div class="form-group">
-                <label class="form-label bg-info">Email:</label>
+                <label class="form-label "><p>Email:</p></label>
                 {{form.emailPac}}
                 <!--<input type="email" class="form-control" name="email" placeholder="Email" required="required">-->
             </div>
             <div class="form-group">
-                <label class="form-label bg-info">Fecha Nacimiento: (YYYY-MM-DD)</label>
+                <label class="form-label"><p>Fecha Nacimiento: (YYYY-MM-DD)</p></label>
                 {{form.bornDatePAc}}
                 <!--<input type="password" class="form-control" name="password" placeholder="Password" required="required">-->
             </div>
             <hr>
             <div class="form-group">
-                <label class="form-label bg-info">Comuna:</label>
+                <label class="form-label "><p>Comuna:</p></label>
                 {{form.fkComuna}}
                 <!--<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">-->
             </div>     
             <div class="form-group">
-                <label class="form-label bg-info">Direccion:</label>
+                <label class="form-label"><p>Direccion:</p></label>
                 {{form.adressPac}}
                 <!--<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">-->
             </div>  
             <div class="form-group">
                 <label class="form-check-label"><input type="checkbox" required="required"> Acepto los <a href="#">Terminos y </a> &amp; <a href="#">Politica de privacidad</a></label>
             </div>
-            <div class="form-group">
+            <div class="form-group" align="center">
                 <button type="submit" class="btn btn-info btn-lg btn-block">Registrar Cuenta</button>
             </div>
         </form>
