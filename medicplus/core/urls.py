@@ -20,4 +20,5 @@ urlpatterns = [
     path("geninfoComision/", views.geninfoComision, name="geninfoComision"),
     path("agenda/", views.agenda, name="agenda"),
     path("borrarcita/<id>/", views.borrarcita, name="borrarcita"),
+    path("login/", views.login, name="login"),
 ]

@@ -20,6 +20,9 @@ def passr(request):
 def tomahora(request):
     return render(request, 'web/tomahora.html')
 
+def login(request):
+    return render(request, 'web/login.html')
+
 def contact(request): #CONTACTO
 
     msnform = contactForm()
